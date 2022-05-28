@@ -1,5 +1,6 @@
 <?php
 require_once "./outil/outils.php";
+#require_once "./model/OrdiManager.php";
 
 
 function afficherAccueil(){
@@ -7,7 +8,7 @@ function afficherAccueil(){
 }
 
 function afficherOrdis(){
-    echo "on est dans afficherOrdis.";
+    require "vue/afficherordis.php";
 }
 
 function supprimerOrdi($id){
