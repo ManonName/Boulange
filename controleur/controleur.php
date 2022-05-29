@@ -12,12 +12,14 @@ function afficherOrdis(){
     require "vue/afficherordis.php";
 }
 
-function supprimerOrdi($id){
-    echo "On est dans supprimerOrdi.";
-}
-
 function afficherOrdi($id){
     echo "On est dans afficherOrdi.";
+}
+
+function supprimerOrdi($id){
+    supprimerOrdiBD($id);
+    $ordi=lireOrdiById($id);
+    header("Location: index.php?action=tab");
 }
 
 function creerOrdi(){

@@ -26,9 +26,9 @@
             <td><?php echo $ordi['vive']; ?></td>
             <td><img width="80" src="public/images/<?php echo $ordi['image']; ?>"></td>
             <td><a href="<?php echo $ordi['lien']; ?>">site</a></td>
-            <td><a href="index.php?action=lire&id=0" class="btn btn-info">Lire</a></td>
-            <td><a href="index.php?action=modifier&id=0" class="btn btn-warning">Modifier</a></td>
-            <td><a href="index.php?action=suppr&id=0" class="btn btn-danger">Supprimer</a></td>
+            <td><a href="index.php?action=lire&id=<?= $ordi['id']; ?>" class="btn btn-info">Lire</a></td>
+            <td><a href="index.php?action=modifier&id=<?= $ordi['id']; ?>" class="btn btn-warning">Modifier</a></td>
+            <td><a href="index.php?action=suppr&id=<?= $ordi['id']; ?>" class="btn btn-danger">Supprimer</a></td>
           </tr>
           <?php } ?>
       </tbody>
