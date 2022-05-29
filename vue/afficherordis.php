@@ -16,20 +16,21 @@
         </tr>
       </thead>
       <tbody>
+          <?php foreach($tabOrdis as $ordi) { ?>
           <tr class="align-middle">
-<!--            <td scope="row"></td>-->
-            <td>2500</td>
-            <td>Acer M7820</td>
-            <td>i7-1800h</td>
-            <td>1400</td>
-            <td>17"</td>
-            <td>16</td>
-            <td><img width="80" src="public/images/01.png"></td>
-            <td><a href="haha.com">site</a></td>
+            <td scope="row"><?php echo $ordi['id']; ?></td>
+            <td><?php echo $ordi['denomination']; ?></td>
+            <td><?php echo $ordi['processeur']; ?></td>
+            <td><?php echo $ordi['prix']; ?></td>
+            <td><?php echo $ordi['ecran']; ?></td>
+            <td><?php echo $ordi['vive']; ?></td>
+            <td><img width="80" src="public/images/<?php echo $ordi['image']; ?>"></td>
+            <td><a href="<?php echo $ordi['lien']; ?>">site</a></td>
             <td><a href="index.php?action=lire&id=0" class="btn btn-info">Lire</a></td>
             <td><a href="index.php?action=modifier&id=0" class="btn btn-warning">Modifier</a></td>
             <td><a href="index.php?action=suppr&id=0" class="btn btn-danger">Supprimer</a></td>
           </tr>
+          <?php } ?>
       </tbody>
     </table> 
 </div>

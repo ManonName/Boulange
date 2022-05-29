@@ -20,10 +20,10 @@
                 <a class="nav-link active" href="index.php">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=tab">Aministration</a>
+                <a class="nav-link" href="index.php?action=tab">Administration</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?action=card">Catalogue</a>
+                <a class="nav-link" href="index.php?action=card">Ordinateurs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?action=panier">Commande</a>

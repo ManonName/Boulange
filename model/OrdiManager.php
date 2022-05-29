@@ -1,6 +1,16 @@
 <?php
     require_once "connexion.php";
 
+        function lireOrdis(){
+        $pdo = getPdo();
+        $sql = "SELECT * FROM ordis";
+        $req = $pdo->prepare($sql);
+        $req->execute();
+        $ordis = $req->fetchAll(PDO::FETCH_ASSOC);
+        $req->closeCursor();
+        return $ordis;
+    }
+    
     function lireOrdisBd(){
         $pdo = getPdo();
         $sql = "SELECT * FROM ordis";
