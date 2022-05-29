@@ -7,13 +7,16 @@ function afficherAccueil(){
     require "vue/accueil.php";
 }
 
+//Affiche la liste des ordinateurs dans l'onglet Administration.
 function afficherOrdis(){
     $tabOrdis= lireOrdis();    
     require "vue/afficherordis.php";
 }
 
+//Fonction qui affiche les caractéristiques d'un ordinateur en particulier dans Administration
 function afficherOrdi($id){
-    echo "On est dans afficherOrdi.";
+    $ordi=lireOrdiById($id);
+    require "vue/afficherordi.php";
 }
 
 function supprimerOrdi($id){
