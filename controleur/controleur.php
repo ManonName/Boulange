@@ -26,12 +26,17 @@ function supprimerOrdi($id){
 }
 
 function creerOrdi(){
-    echo "On est dans creerOrdi.";
+    require "vue/formulaireordi.php";
 }
 
 function creerValidationOrdi(){
-    echo "On est dans creerValidationOrdi.";
+    $file = $_FILES['image'];
+    $repertoire = "public/images/";
+    $nomImageAjoute = ajouterImage($file,$repertoire);
+    ajouterOrdiBd($_POST['denomination'],$_POST['prix'],$_POST['processeur'], $_POST['ecran'], $_POST['vive'], $nomImageAjoute,$_POST['lien']);
+    header("Location: index.php?action=tab");   
 }
+
 
 function afficherCardOrdis(){
     echo "On est dans afficherCardOrdis";
