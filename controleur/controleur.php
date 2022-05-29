@@ -5,6 +5,7 @@ require_once "./model/OrdiManager.php";
 
 function afficherAccueil(){
     require "vue/accueil.php";
+    
 }
 
 //Affiche la liste des ordinateurs dans l'onglet Administration.
