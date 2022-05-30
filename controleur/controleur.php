@@ -53,7 +53,19 @@ function modifierValidationOrdi(){
 }
 
 function ajouterOrdiPanier($id){
-    echo "On est dans ajouterOrdiPanier.";
+    echo "controleur ajouerterOrdiPanier id=".$id;
+    if(!isset($_SESSION['ordis'])){
+        $_SESSION['ordis'] = array();
+     }
+     if(in_array($id, $_SESSION['ordis'])){
+         echo $id." est déjà commandé<br>";
+     }
+         else {
+             $_SESSION['ordis'][]=$id;
+     }
+     afficherTableau($_SESSION['livres'],"SESSION['ordis']");
+     header("Location: index.php?action=card");
+        
 }
 
 function afficherCommande(){
