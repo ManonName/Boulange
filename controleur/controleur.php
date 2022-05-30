@@ -69,7 +69,15 @@ function ajouterOrdiPanier($id){
 }
 
 function afficherCommande(){
-    echo "On est dans afficherCommande.";
+    foreach($_SESSION['ordis'] as $id){
+        $ordis[]=lireOrdiById($id);
+    }
+    if(isset($ordis)){
+        if(count($ordis) > 0)
+            require "vue/afficherCommande.php";
+    }
+    else //echo "La commande est vide<br>";
+        header("Location: index.php?action=card");
 }
 
 function supprimerCommande(){
