@@ -45,11 +45,16 @@ function afficherCardOrdis(){
 }
 
 function modifierOrdi($id){
-    echo "On est dans modifierOrdi";
+    echo "Modifier ORDI id=".$id."<br>";
+    $ordi=lireOrdiById($id);
+    require "vue/modifierordi.php";
 }
 
-function modifierValidationOrdi(){
-    echo "On est dans modifierValidationOrdi.";
+function modifiervalidationOrdi(){
+    afficherTableau($_POST,"POST");
+    echo "Modifier VALIDATION ORDI id<br>";
+    modificationOrdiBD($_POST['id'],$_POST['denomination'], $_POST['processeur'],$_POST['prix'],$_POST['ecran'],$_POST['vive'], $_POST['image'], $_POST['lien']);
+    header("Location: index.php?action=tab");
 }
 
 function ajouterOrdiPanier($id){
