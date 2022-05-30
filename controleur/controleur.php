@@ -40,7 +40,8 @@ function creerValidationOrdi(){
 
 
 function afficherCardOrdis(){
-    echo "On est dans afficherCardOrdis";
+            $tabOrdis=lireOrdis();
+            require "vue/cardOrdis.php";
 }
 
 function modifierOrdi($id){
