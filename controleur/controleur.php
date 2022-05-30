@@ -81,7 +81,9 @@ function afficherCommande(){
 }
 
 function supprimerCommande(){
-    echo "On est dans supprimerCommande";
+    $_SESSION['ordis'] = array();
+    afficherTableau($_SESSION,"controleur - supprimerCommand _SESSION");
+    header("Location: index.php?action=card");
 }
 
 ?>
