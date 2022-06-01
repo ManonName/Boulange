@@ -2,7 +2,7 @@
 
 <!-- "Bonjour à tous, page accueil - ob_start"; -->
 <!--  <h1>Page d'accueil</h1> -->
-<h3>Bibliothéque spécialisé jeunes enfants</h3>
+<h3>Site e-commerce pour vente d'ordinateurs</h3>
 <p>Quand on parcourt l'histoire des bibliothèques françaises, on mesure l'importance du rôle
 qu'y ont joué les bibliothèques pour les jeunes, à tel point qu'on a parfois l’impression que les
 bibliothèques pour adultes leur doivent tout ou presque. Une grande part de ce qui a fait la force ou
