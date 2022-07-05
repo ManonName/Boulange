@@ -1,5 +1,6 @@
 <?php
     require_once "connexion.php";
+    class OrdisController{
 
         function lireOrdis(){
         $pdo = getPdo();
@@ -64,3 +65,4 @@
             echo "livre insérer id=".$pdo->lastInsertId()."<br>";
         }        
     }
+}
