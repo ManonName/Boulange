@@ -1,6 +1,6 @@
 <?php 
   require_once "../outil/outils.php";
-  require_once "../model/OrdiManager.php"; 
+  require_once "OrdiManager.class.php"; 
   
   $ordi = array
         (
@@ -135,11 +135,17 @@
   );
   $tabOrdis[]=$ordi;
   //afficherTableau($tabOrdis,"Tableau ordinateurs");
-  function getTabOrdis(){
-    global $tabOrdis;
-    return $tabOrdis;
-  }
-  foreach($tabOrdis as $ordi){
-    ajouterOrdiBd($ordi['denomination'],$ordi['prix'],$ordi['processeur'],$ordi['ecran'],$ordi['vive'],$ordi['image'],$ordi['lien']);
-  }
-  //ajouterOrdiBd($denomination,$prix,$processeur,$ecran,$vive,$image,$lien)
+//  function getTabOrdis(){
+//    global $tabOrdis;
+//    return $tabOrdis;
+//  }
+//  foreach($tabOrdis as $ordi){
+//    ajouterOrdiBd($ordi['denomination'],$ordi['prix'],$ordi['processeur'],$ordi['ecran'],$ordi['vive'],$ordi['image'],$ordi['lien']);
+//  }
+//  //ajouterOrdiBd($denomination,$prix,$processeur,$ecran,$vive,$image,$lien)
+  
+ $ordiManager = new OrdiManager();
+ for($i=0; $i<count($tabOrdis); $i++) {     
+    $ordiManager->ajouterOrdiBd($tabOrdis[$i]['denomination'],$tabOrdis[$i]['processeur'],$tabOrdis[$i]['prix'],$tabOrdis[$i]['ecran'],$tabOrdis[$i]['vive'],$tabOrdis[$i]['image'],$tabOrdis[$i]['lien']);
+}
+?>

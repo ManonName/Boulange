@@ -1,0 +1,47 @@
+<?php
+class Livre{
+    private $id;
+    private $titre;
+    private $prix;
+    private $nbPages;
+    private $image;
+    private $description;
+
+    function __construct($id, $denomination, $prix , $processeur, $ecran, $vive, $image, $lien) {
+        $this->id = $id;
+        $this->denomination = $denomination;
+        $this->prix = $prix;
+        $this->processeur = $processeur;
+        $this->ecran = $ecran;
+        $this->vive = $vive;
+        $this->image = $image;
+        $this->lien = $lien;
+    }
+    public function __toString() {
+        return "id=".$this->id." denomination=".$this->denomination." prix=".$this->prix." processeur=".$this->processeur." ecran=".$this->ecran." vive=".$this->vive." image=".$this->image." lien=".$this->lien;
+    }
+
+    public function getId(){return $this->id;}
+    public function setId($id){$this->id = $id;}
+
+    public function getTitre(){return $this->denomination;}
+    public function setTitre($denomination){$this->denomination = $denomination;}
+    
+    public function getPrix(){return $this->prix;}
+    public function setPrix($prix){$this->prix = $prix;}
+
+    public function getNbPages(){return $this->processeur;}
+    public function setNbPages($processeur){$this->processeur = $processeur;}
+
+    public function getImage(){return $this->ecran;}
+    public function setImage($ecran){$this->ecran = $ecran;}
+    
+    public function getDescription(){return $this->vive;}
+    public function setDescription($vive){$this->vive = $vive;}
+    
+    public function getDescription(){return $this->image;}
+    public function setDescription($image){$this->image = $image;}
+    
+    public function getDescription(){return $this->lien;}
+    public function setDescription($lien){$this->lien = $lien;}
+}
